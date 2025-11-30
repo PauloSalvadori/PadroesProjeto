@@ -1,7 +1,3 @@
-# ✅ **README — Adapter**  
-(Copie apenas este para a pasta `/adapter`)
-
-```markdown
 # Padrão de Projeto Estrutural: Adapter
 
 O código presente nesta pasta se baseia no conteúdo do site "Refactoring Guru", referenciado no link abaixo:  
