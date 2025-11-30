@@ -52,3 +52,34 @@ Classe que utiliza a estratégia definida.
 
 ### **main.py**
 Demonstração prática de troca dinâmica de estratégias.
+
+```mermaid
+classDiagram
+    class EstrategiaFrete {
+        <<interface>>
+        + calcular()
+    }
+
+    class FreteNormal {
+        + calcular()
+    }
+
+    class FreteExpresso {
+        + calcular()
+    }
+
+    class FreteInternacional {
+        + calcular()
+    }
+
+    class CalculadoraFrete {
+        - estrategia
+        + definir_estrategia()
+        + calcular()
+    }
+
+    EstrategiaFrete <|.. FreteNormal
+    EstrategiaFrete <|.. FreteExpresso
+    EstrategiaFrete <|.. FreteInternacional
+    CalculadoraFrete --> EstrategiaFrete
+```

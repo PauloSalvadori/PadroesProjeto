@@ -53,3 +53,23 @@ O Adapter é usado para traduzir a nova chamada para o formato antigo, permitind
 
 ### **main.py**
 - Demonstra a integração entre o sistema moderno e o antigo através do adapter.
+
+```mermaid
+classDiagram
+    class ProcessadorPagamentoNovo {
+        <<interface>>
+        + processar_pagamento()
+    }
+
+    class SistemaPagamentoAntigo {
+        + realizar_transacao()
+    }
+
+    class PagamentoAdapter {
+        - sistema_antigo
+        + processar_pagamento()
+    }
+
+    ProcessadorPagamentoNovo <|.. PagamentoAdapter
+    PagamentoAdapter --> SistemaPagamentoAntigo
+```

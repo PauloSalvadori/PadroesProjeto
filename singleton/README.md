@@ -53,3 +53,14 @@ A aplicação pode acessar ou alterar configurações através de uma única ins
 ### **main.py**
 - Cria duas instâncias e demonstra que ambas referenciam o mesmo objeto;
 - Altera configurações e mostra que todos os acessos compartilham os mesmos valores.
+
+```mermaid
+classDiagram
+    class GerenciadorConfiguracoes {
+        - instancia
+        - dados
+        + definir()
+        + obter()
+        + todas()
+    }
+```
